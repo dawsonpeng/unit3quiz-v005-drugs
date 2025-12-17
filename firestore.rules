@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Votes collection - allow read for everyone, write for everyone
+    // This allows users to vote and see vote counts
+    match /votes/{document=**} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Default deny all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+

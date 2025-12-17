@@ -23,12 +23,20 @@ dist-ssr
 build
 *.local
 
-# Environment variables
+# Environment variables and secrets
 .env
+.env.*
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env.development
+.env.test
+.env.production
+*.env
+!.env.example
+!.env.template
+.envrc
 
 # Editor directories and files
 .vscode/*
@@ -57,6 +65,10 @@ Desktop.ini
 firebase-debug.log
 firestore-debug.log
 ui-debug.log
+firebase-adminsdk-*.json
+serviceAccountKey.json
+*-service-account.json
+firebase-service-account.json
 
 # Temporary files
 *.tmp
@@ -78,3 +90,60 @@ ui-debug.log
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Private information and credentials
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+*.p7b
+*.p7c
+*.p7m
+*.p7s
+*.jks
+*.keystore
+*.truststore
+secrets.json
+secrets.yaml
+secrets.yml
+credentials.json
+credentials.yaml
+credentials.yml
+*.credentials
+*.secret
+*secret*
+*private*
+*key*
+config.local.*
+config.private.*
+*-private.*
+*-secret.*
+api-keys.json
+api-keys.yaml
+api-keys.yml
+*.apikey
+*.api-key
+
+# Backup files (may contain sensitive data)
+*.bak
+*.backup
+*.old
+*.orig
+*~
+
+# Database files (may contain sensitive data)
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+
+# Local configuration overrides
+config.local.js
+config.local.json
+config.local.ts
+settings.local.*
+local.config.*
