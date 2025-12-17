@@ -27,6 +27,13 @@
   font-weight: 400;
 }
 
+.header-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
 .data-source {
   margin: 0;
   font-size: 0.9rem;
@@ -43,6 +50,34 @@
 .data-source a:hover {
   color: #764ba2;
   text-decoration: underline;
+}
+
+.github-link {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.github-link-icon {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.github-link-icon:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.github-link-icon svg {
+  transition: transform 0.2s;
+}
+
+.github-link-icon:hover svg {
+  transform: scale(1.1);
 }
 
 .app-main {
@@ -333,6 +368,15 @@
 @media (max-width: 768px) {
   .app-header h1 {
     font-size: 2rem;
+  }
+
+  .header-links {
+    gap: 0.75rem;
+  }
+
+  .data-source,
+  .github-link {
+    font-size: 0.85rem;
   }
 
   .app-main {
