@@ -1,16 +1,87 @@
-# React + Vite
+# Unit 3 Quiz - Drugs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite quiz application for Honors Topics Unit 3.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - UI library
+- **Vite 7** - Build tool and dev server
+- **Firebase Hosting** - Deployment platform
+- **ESLint** - Code linting
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (v18 or higher recommended)
+- npm or yarn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`
+
+### Building for Production
+
+Build the project for production:
+
+```bash
+npm run build
+```
+
+The production build will be in the `dist` directory.
+
+### Preview Production Build
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+### Linting
+
+Run ESLint to check for code issues:
+
+```bash
+npm run lint
+```
+
+## Deployment
+
+This project is configured for Firebase Hosting. The `dist` directory is set as the public directory.
+
+To deploy:
+
+```bash
+firebase deploy
+```
+
+## Project Structure
+
+```
+├── public/          # Static assets
+├── src/
+│   ├── assets/      # Images and other assets
+│   ├── App.jsx      # Main application component
+│   ├── App.css      # Application styles
+│   ├── index.css    # Global styles
+│   └── main.jsx     # Application entry point
+├── dist/            # Production build output
+└── firebase.json    # Firebase configuration
+```
+
+## License
+
+Private project for educational purposes.
